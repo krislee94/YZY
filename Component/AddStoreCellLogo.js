@@ -8,9 +8,27 @@ import {
     View,
     Dimensions,
 Image,
+    TouchableOpacity,
 
     PixelRatio,
 } from 'react-native';
+import ImagePicker from 'react-native-image-picker';
+var photoOptions = {
+    title:'请选择',
+    cancelButtonTitle:'取消',
+    takePhotoButtonTitle:'拍照',
+    chooseFromLibraryButtonTitle:'选择相册',
+    quality:0.75,
+    allowsEditing:true,
+    noData:false,
+    storageOptions: {
+        skipBackup: true,
+        path:'images',
+        cameraRoll:true,
+
+    }
+
+}
 
 const fullWidth = Dimensions.get('window').width;
 const fullHeight = Dimensions.get('window').height;
@@ -28,18 +46,40 @@ class AddStoreCellLogo extends Component{
 
         }
     }
+    //打开相机的选择方法，很吊的
+    openMycamera = () =>{
+        ImagePicker.showImagePicker(photoOptions,(response) =>{
+            console.log('response'+response);
+            if (response.didCancel){
+                return
+            }else if(response.eror){
+                console.log('ImagePicker Error',response.error)
+            }else{
+
+                let baseUri = base64.encode(response.uri);
+
+
+            }
+
+        })
+    }
     render(){
         return(
             <View style = {styles.container}>
                 <Text style = {styles.tx1}>{this.props.name}</Text>
+                <TouchableOpacity onPress={()=>this.openMycamera()} >
                 <Image
                     style = {styles.img}
-                    source={require('./jia.png')}
+                    source={require('./img/jia.png')}
                 />
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={()=>this.openMycamera()}>
                 <Image
                     style = {styles.img1}
-                    source={require('./youji.png')}
+                    source={require('./img/you.png')}
                 />
+                    </TouchableOpacity>
 
 
             </View>
@@ -70,6 +110,7 @@ const styles = StyleSheet.create({
         height:0.125*fullWidth,
         marginLeft:0.56*fullWidth,
         marginRight:0.01*fullWidth,
+        borderRadius:5,
 
 
     },

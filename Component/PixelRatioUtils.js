@@ -14,8 +14,6 @@ function toDips(px) {
   return px*pix/4;
 }
 
-
-
 export {
 
     toDips,

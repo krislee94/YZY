@@ -14,6 +14,9 @@ import {
 import ImagePiker from 'react-native-image-picker';
 import AddStore from './Component/AddStore';
 import AddLogo from './Component/AddLogo';
+import AddAddressFailure from './Component/AddAddressFailure';
+import AddAddressSuccess from './Component/AddAddressSuccess';
+import StoreName from './Component/StoreName';
 
 export default class YZY extends Component {
   
@@ -21,7 +24,10 @@ export default class YZY extends Component {
     return (
       <View>
 
-       <AddStore />
+        <AddAddressFailure />
+        {/*<AddAddressSuccess />*/}
+        {/*<StoreName />*/}
+        {/*<AddStore />*/}
 
       </View>
     );

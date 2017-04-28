@@ -17,9 +17,12 @@ import AddStoreCellSwitch from './AddStoreCellSwitch';
 import AddStoreCellSign from './AddStoreCellSign';
 import {toDips} from './PixelRatioUtils';
 
+
 const fullWidth = Dimensions.get('window').width;
 const fullHeight = Dimensions.get('window').height;
 const pix = PixelRatio.get();
+
+
 
 class AddStore extends Component{
     constructor(props){
@@ -33,7 +36,7 @@ class AddStore extends Component{
     renderHeader(){
         return(
             <View style={styles.header}>
-                <Image source={require('./zuo.png')} style={styles.img}/>
+                <Image source={require('./img/zuo.png')} style={styles.img}/>
                 <Text style = {styles.tx1}>店铺信息</Text>
                 {/*<Image source={require('./sou.png')} style={styles.img1} />*/}
                 <Text style = {styles.tx2}>保存</Text>
@@ -49,6 +52,7 @@ class AddStore extends Component{
         );
 
     }
+
     renderContent(){
         return(
             <View>
@@ -58,7 +62,7 @@ class AddStore extends Component{
 
                 />
                 <AddStoreCellLogo
-                    name = '店铺Logo'
+                    name = '店铺LoGo'
 
 
                 />

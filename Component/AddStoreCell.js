@@ -66,21 +66,22 @@ const styles = StyleSheet.create({
         justifyContent:'space-between'
     },
     img:{
-        width:20,
-        height:19,
+        width:toDips(40),
+        height:toDips(38),
         marginRight:0.04*fullWidth,
     },
     tx1:{
-        fontSize:15,
+        fontSize:toDips(30),
         color:'#afabaf',
         marginLeft:toDips(30),
 
     },
     tx2:{
-        fontSize:13,
+        fontSize:toDips(26),
         color:'#d5ced5',
 
-    }
+    },
+
 
 
 });
