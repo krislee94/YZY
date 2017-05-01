@@ -17,17 +17,19 @@ import AddLogo from './Component/AddLogo';
 import AddAddressFailure from './Component/AddAddressFailure';
 import AddAddressSuccess from './Component/AddAddressSuccess';
 import StoreName from './Component/StoreName';
+import Test from './Component/Test';
 
 export default class YZY extends Component {
   
   render() {
     return (
       <View>
-
-        <AddAddressFailure />
+{/*
+        <AddAddressFailure />*/}
         {/*<AddAddressSuccess />*/}
         {/*<StoreName />*/}
         {/*<AddStore />*/}
+        <Test />
 
       </View>
     );

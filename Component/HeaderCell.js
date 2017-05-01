@@ -30,6 +30,7 @@ class HeaderCell extends Component{
 
             return(
                 <View style={styles.header}>
+                   
                     <Image source={require('./img/zuo.png')} style={styles.img}/>
                     <Text style = {styles.tx1}>{this.props.name}</Text>
                     {/*<Image source={require('./sou.png')} style={styles.img1} />*/}
