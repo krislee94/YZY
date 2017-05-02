@@ -22,7 +22,8 @@ import AddStoreCellSign from '../AddStoreCellSign';
 import {toDips} from '../PixelRatioUtils';
 import LogoImg from './LogoImg';
 import StoreInfoCell from './StoreInfoCell'
-
+import StoreSwitch from './StoreSwitch';
+import StoreSign from './StoreSign';
 
 const fullWidth = Dimensions.get('window').width;
 const fullHeight = Dimensions.get('window').height;
@@ -118,11 +119,21 @@ class StoreInfo extends Component{
                 />
                 <StoreInfoCell
                     name= "营业时间"
-                    text= {dataRow.beginTime +'——'+dataRow.endTime}
+                    text= {dataRow.beginTime +'—'+dataRow.endTime}
                 />
                 <LogoImg
-                    
+                    name="资质证明"
                 />
+                {this.renderGray()}
+                <StoreSwitch
+                    name="店铺状态"
+                    text="正常营业"
+                 />
+                <StoreSign
+                    name = "店铺公告"
+                />
+
+
 
             </View>
 

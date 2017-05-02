@@ -21,6 +21,8 @@ import Test from './Component/Test';
 
 import StoreInfoCell from './Component/StoreInfo/StoreInfoCell';
 import StoreInfo from './Component/StoreInfo/StoreInfo';
+import InfoSwiper from './Component/StoreInfo/InfoSwiper';
+// import FansCharge from './Component/fans/FansCharge';
 
 export default class YZY extends Component {
   
@@ -33,7 +35,10 @@ export default class YZY extends Component {
         {/*<StoreName />*/}
         {/*<AddStore />*/}
         {/*<Test />*/}
-        <StoreInfo />
+        {/*<StoreInfo />*/}
+
+        <InfoSwiper />
+       
 
       </View>
     );

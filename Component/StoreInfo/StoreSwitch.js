@@ -4,6 +4,9 @@
 /**
  * Created by air on 2017/4/27.
  */
+/**
+ * Created by air on 2017/4/27.
+ */
 import React, { Component } from 'react';
 import {
     StyleSheet,
@@ -13,19 +16,19 @@ import {
     TouchableOpacity,
     PixelRatio,
     Image,
+    Switch,
 } from 'react-native';
-import {toDips} from '../PixelRatioUtils';
 
 const fullWidth = Dimensions.get('window').width;
 const fullHeight = Dimensions.get('window').height;
 const pix = PixelRatio.get();
 
-class StoreInfoCell extends Component{
+class StoreSwitch extends Component{
     constructor(props){
         super(props);
 
         this.state = {
-
+            trueSwitchIsOn:true,
 
         }
 
@@ -34,7 +37,6 @@ class StoreInfoCell extends Component{
         return{
             name:'',
             text:'',
-
 
         }
     }
@@ -45,6 +47,12 @@ class StoreInfoCell extends Component{
             <View style = {styles.view1}>
                 <Text style = {styles.tx1}>{this.props.name}</Text>
                 <Text style = {styles.tx2}>{this.props.text}</Text>
+                <Switch
+                    onValueChange={(value)=>this.setState({trueSwitchIsOn:value})}
+                    value={this.state.trueSwitchIsOn}
+                    onTintColor="#3c8fff"
+                />
+
             </View>
         );
     }
@@ -59,28 +67,25 @@ const styles = StyleSheet.create({
         alignItems:'center',
         borderBottomWidth:0.33*pix,
         borderColor:'#bbbbbb',
-        justifyContent:'space-between'
     },
     img:{
-        width:toDips(40),
-        height:toDips(38),
+        width:20,
+        height:19,
         marginRight:0.04*fullWidth,
     },
     tx1:{
-        fontSize:toDips(30),
+        fontSize:15,
         color:'black',
-        marginLeft:toDips(30),
+        marginLeft:0.04*fullWidth,
 
     },
     tx2:{
-        fontSize:toDips(26),
-        color:'#d5ced5',
-        marginRight:toDips(30),
-
-    },
-
+        fontSize:13,
+        color:'black',
+        marginLeft:0.42*fullWidth,
+    }
 
 
 });
 
-module.exports = StoreInfoCell;
+module.exports = StoreSwitch;

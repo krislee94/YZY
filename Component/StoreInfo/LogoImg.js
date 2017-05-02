@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     },
     tx1:{
         fontSize:15,
-        color:'#afabaf',
+        color:'black',
         marginLeft:0.04*fullWidth,
 
     },
