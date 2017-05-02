@@ -19,6 +19,9 @@ import AddAddressSuccess from './Component/AddAddressSuccess';
 import StoreName from './Component/StoreName';
 import Test from './Component/Test';
 
+import StoreInfoCell from './Component/StoreInfo/StoreInfoCell';
+import StoreInfo from './Component/StoreInfo/StoreInfo';
+
 export default class YZY extends Component {
   
   render() {
@@ -29,7 +32,8 @@ export default class YZY extends Component {
         {/*<AddAddressSuccess />*/}
         {/*<StoreName />*/}
         {/*<AddStore />*/}
-        <Test />
+        {/*<Test />*/}
+        <StoreInfo />
 
       </View>
     );

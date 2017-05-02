@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
         backgroundColor:'#f5f5f5',
         alignItems:'center',
         flexDirection:'row',
+        
 
     },
 
