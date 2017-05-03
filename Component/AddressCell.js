@@ -31,7 +31,7 @@ class AddressCell extends Component{
     render(){
         return(
             <View style = {styles.container}>
-                <View style = {styles.view1}>s
+                <View style = {styles.view1}>
                 <Image
                     style = {styles.img}
                     source={require('./img/shu.png')}

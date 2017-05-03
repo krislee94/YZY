@@ -120,21 +120,16 @@ class AddAddressFailure extends Component{
     }
     fetchData(){
         var dataS = eval(dataR);
-        // var sell = {};
-        // console.log('22222222222222'+dataS.Citys[1].Name);
-        // for (let i = 0;i<dataS.Citys.length;i++){
-        //     sell = dataS.Citys[i];
-        //
-        // }
+       
         this.setState({
-            //用于封装克隆后的数据，data。 可以获取到data下的子集，但是不能获取到sellerList。
+           
             dataSource: this.state.dataSource.cloneWithRows(dataS.Citys),
 
         });
     }
-    //加载ListView的数据
+    
     renderRow(dataRow){
-        // console.log('11111111111111'+dataRow);
+       
         return(
             <View style = {styles.txbor}>
                 <Text style = {styles.renderData}>{dataRow.Name}</Text>
@@ -176,7 +171,7 @@ class AddAddressFailure extends Component{
                 <AddressCell
                     text="所有楼宇"
                 />
-                {/*jiazaisuoyoulouyu*/}
+              
                 <RenderAllBuilding />
 
 
