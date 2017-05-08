@@ -24,7 +24,9 @@ import StoreInfo from './Component/StoreInfo/StoreInfo';
 import InfoSwiper from './Component/StoreInfo/InfoSwiper';
 import FansCharge from './Component/Fans/FansCharge'
 import WorkTableVC from './Component/Fans/WorkTableVC';
-
+import Charge from './Component/Fans/Charge';
+// import Drop from './Component/App/TimePicker';
+import TimePicker from './Component/App/TimePicker'
 export default class YZY extends Component {
   
   render() {
@@ -40,9 +42,11 @@ export default class YZY extends Component {
 
         {/*<InfoSwiper />*/}
         {/*<WorkTableVC />*/}
-        <FansCharge/>
+        {/*<FansCharge/>*/}
+        {/*<Charge />*/}
         
-
+{/*<Drop />*/}
+<TimePicker />
 
       </View>
     );
